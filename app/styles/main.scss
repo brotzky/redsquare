@@ -477,19 +477,18 @@ hr {
     background: linear-gradient(-45deg, #FFFFFF 0%, #FFFFFF 50%, #FAFAFA 50%, #FAFAFA 51%, #FAFAFA 100%);
 }
 .contact-m {
-    background: url(../images/redsquare-repeated-background.jpg) repeat center center;
-
+    background-color: #484848;
     display: block;
     color: #fff;
-    background-color: #fff;
+
 
 
 
     .contact-wrap {
-         display: inline-block;
+         display: block;
          padding: 50px;
         width: 49%;
-        margin: 0 auto;
+        margin: 0px auto;
         background-color: #fff;
     }
     .contact-header {
