@@ -160,8 +160,8 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>/styles',
           src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          ext: '.css'
+          dest: ['.tmp/styles/', 'app/styles'],
+          ext: '.min.css'
         }]
       },
       server: {

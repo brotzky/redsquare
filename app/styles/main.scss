@@ -1,34 +1,3 @@
-// bower:scss
-// endbower
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Table of contents
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -263,20 +232,7 @@ there.
 */
 
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
 
 
 .nav-m {
@@ -309,11 +265,18 @@ there.
         }
     }
     .nav-logo {
+        background: url(../images/redsquare-logo-with-text.png) no-repeat center center;
         position: relative;
+        float: left;
         height: 50px;
+        width: 450px;
         margin-top: -12px;
+        color: transparent;
+        text-shadow: none;
+        background-color: transparent;
     }
 }
+
 
 hr {
     margin: 0 0 25px;
@@ -335,7 +298,6 @@ hr {
     margin-right: auto;
 }
 
-
 .hero-m {
     min-height: 600px;
     background: url(../images/redsquare-hero-background.jpg) no-repeat center center;
@@ -348,6 +310,10 @@ hr {
         margin: 125px 0px 0px;
         padding: 30px 10px 10px 45px;
         background-color: #fff;
+        transform: translateX(-3.3em);
+        opacity: 0;
+        -webkit-transition: all 555ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition:           all 555ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
         h1 {
             color: #484848;
@@ -400,7 +366,7 @@ hr {
 
 
 .international-m {
-    background-color: #fafafa;
+    background-color: #f5f5f5;
 
     .international-city {
         min-height: 400px;
@@ -477,9 +443,14 @@ hr {
     background: linear-gradient(-45deg, #FFFFFF 0%, #FFFFFF 50%, #FAFAFA 50%, #FAFAFA 51%, #FAFAFA 100%);
 }
 .contact-m {
-    background-color: #484848;
+
+    // background-color: #fafafa;
     display: block;
     color: #fff;
+    padding: 25px 0px;
+
+    height: 700px;
+    background-color: #f5f5f5;
 
 
 
@@ -489,9 +460,13 @@ hr {
          padding: 50px;
         width: 49%;
         margin: 0px auto;
-        background-color: #fff;
+
     }
     .contact-header {
+        width: 328px;
+          margin-left: -74px;
+          background-color: #fff;
+          padding: 25px;
         span svg{
             height: 50px;
             width: 50px;
@@ -500,7 +475,22 @@ hr {
         }
     }
 
+    .contact-form {
+        position: relative;
+        background-color: #fff;
+
+        .contact-blurb {
+            color: #484848;
+            width: 350px;
+            padding: 35px;
+            background-color: #fff;
+            position: absolute;
+            right: -100px;
+            top: -100px;
+        }
+    }
     form {
+        padding: 50px 25px;
 
 
         input,
@@ -520,6 +510,7 @@ hr {
         }
         input:focus,
         textarea:focus {
+            outline: none;
             border: none;
             border-bottom: 2px solid rgba(0,0,0,0.5);
             border-left: 2px solid rgba(0,0,0,0.5);
@@ -533,15 +524,55 @@ hr {
         button {
             display: block;
             width: 50%;
+            padding: 15px 40px;
             margin: 50px auto 0px;
             color: #fff;
             background-color: #E62B1E;
             outline: none;
             border: 1px solid #E62B1E;
             border-radius: 2px;
-            font-size: 16px;
+            font-size: 20px;
             font-family: "Source Sans Pro", sans-serif;
-            font-weight: 400;
+            font-weight: 300;
         }
     }
 }
+
+.is-active {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}
+
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (max-width: 1090px) {
+    .nav-m {
+        .nav-logo {
+            background: url(../images/redsquare-logo.png) no-repeat center center;
+            position: relative;
+            float: left;
+            height: 52px;
+            width: 52px;
+            margin-top: -12px;
+            color: transparent;
+            text-shadow: none;
+            background-color: transparent;
+        }
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1040px) {
+
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
